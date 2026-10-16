@@ -1,0 +1,8 @@
+runs/
+.venv/
+__pycache__/
+*.pyc
+remotion/node_modules/
+remotion/out/
+remotion/public/runs/
+.env

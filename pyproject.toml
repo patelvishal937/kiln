@@ -1,0 +1,18 @@
+# Kiln's Python helper scripts (scripts/). The engine is the SKILL — these are just the
+# deterministic tools the agent runs: state, validation, website recon, QA, media, report.
+# No API key, no package build; install the deps and run scripts/kiln.py.
+
+[project]
+name = "kiln-scripts"
+version = "0.2.0"
+description = "Local helper scripts for the Kiln build engine (runs inside Claude Code / Codex)."
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2.7",
+  "httpx>=0.27",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+recon = ["playwright>=1.45"]   # rendered-DOM teardown + screenshots
+s3 = ["boto3>=1.34"]           # upload rendered videos for site embedding
